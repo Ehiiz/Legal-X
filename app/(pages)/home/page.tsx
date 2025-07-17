@@ -1,10 +1,10 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
+"use client";
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
-function page() {
-    const [currentSlide, setCurrentSlide] = useState(0);
+function Page() {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const slides = [
     {
@@ -12,22 +12,22 @@ function page() {
       subtitle: "to the world",
       description: "Join Legal X and globalize your business",
       image: "/Screenshot.svg", // Add your image path
-      backgroundImage: "/bg1.svg" // Add your background image path
+      backgroundImage: "/bg1.svg", // Add your background image path
     },
     {
       title: "We Help You Pivot Your Career",
       subtitle: "",
       description: "Connect with top lawyers from anywhere in the world",
       image: "/Screenshot1.svg", // Add your image path
-      backgroundImage: "/bg2.svg" // Add your background image path
+      backgroundImage: "/bg2.svg", // Add your background image path
     },
     {
       title: "Reinvent Your Business ",
       subtitle: "",
       description: "Revolutionary legal services at your fingertips",
       image: "/Screenshot2.svg",
-      backgroundImage: "/bg3.svg" // Add your background image path
-    }
+      backgroundImage: "/bg3.svg", // Add your background image path
+    },
   ];
 
   // Auto-slide functionality
@@ -50,7 +50,7 @@ function page() {
   const goToSlide = (index: React.SetStateAction<number>) => {
     setCurrentSlide(index);
   };
-  
+
   return (
     <div className="relative bg-black text-white min-h-screen overflow-hidden">
       {/* Background Image Slider */}
@@ -59,7 +59,7 @@ function page() {
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
             <Image
@@ -82,14 +82,17 @@ function page() {
       <div className="relative z-10 flex items-center min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            
             {/* Left Content */}
             <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
               <div className="space-y-3 lg:space-y-4">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-                  <span className="text-[#b3872d]">{slides[currentSlide].title}</span>
+                  <span className="text-[#b3872d]">
+                    {slides[currentSlide].title}
+                  </span>
                   <br />
-                  <span className="text-white">{slides[currentSlide].subtitle}</span>
+                  <span className="text-white">
+                    {slides[currentSlide].subtitle}
+                  </span>
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-300 max-w-md mx-auto lg:mx-0">
                   {slides[currentSlide].description}
@@ -99,18 +102,19 @@ function page() {
               {/* Partnership Section */}
               <div className="pt-6 lg:pt-8">
                 <p className="text-gray-400 mb-4 lg:mb-6 text-sm sm:text-base">
-                  We <span className="text-[#b3872d]">partner with</span> the best professionals
+                  We <span className="text-[#b3872d]">partner with</span> the
+                  best professionals
                 </p>
-                
+
                 <div className="flex justify-center lg:justify-start">
-                  <Image 
-                      src="/Group.svg" 
-                      alt="Group" 
-                      width={600}
-                      height={0}
-                      className="mb-4 w-full max-w-xs sm:max-w-sm lg:max-w-full"
-                      priority
-                    />
+                  <Image
+                    src="/Group.svg"
+                    alt="Group"
+                    width={600}
+                    height={0}
+                    className="mb-4 w-full max-w-xs sm:max-w-sm lg:max-w-full"
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -122,14 +126,14 @@ function page() {
                   <div
                     key={index}
                     className={`absolute inset-0 transition-all duration-700 transform ${
-                      index === currentSlide 
-                        ? 'opacity-100 scale-100 translate-x-0' 
-                        : 'opacity-0 scale-95 translate-x-4'
+                      index === currentSlide
+                        ? "opacity-100 scale-100 translate-x-0"
+                        : "opacity-0 scale-95 translate-x-4"
                     }`}
                   >
-                    <Image 
-                      src={slide.image} 
-                      alt={`Legal Professional ${index + 1}`} 
+                    <Image
+                      src={slide.image}
+                      alt={`Legal Professional ${index + 1}`}
                       width={600}
                       height={600}
                       className="object-contain"
@@ -139,9 +143,8 @@ function page() {
                 ))}
               </div>
             </div>
-
           </div>
-        </div>   
+        </div>
       </div>
 
       {/* Navigation Arrows */}
@@ -166,7 +169,9 @@ function page() {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
-              index === currentSlide ? 'bg-[#b3872d] w-3 h-3 sm:w-4 sm:h-4' : 'bg-white/30'
+              index === currentSlide
+                ? "bg-[#b3872d] w-3 h-3 sm:w-4 sm:h-4"
+                : "bg-white/30"
             }`}
           />
         ))}
@@ -175,4 +180,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
