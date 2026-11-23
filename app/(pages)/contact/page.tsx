@@ -38,20 +38,20 @@ const page = () => {
                 Tap the below number to call
               </p>
               <a
-                href="tel:08033398877"
+                href="tel:+2348029398817"
                 className="text-[#b3872d] font-bold hover:text-[#b3872d] transition-colors"
               >
-                08033398877
+                +234 802 939 8817
               </a>
             </div>
 
             <div>
               <p className="text-gray-500  text-sm">Mail us at</p>
               <a
-                href="mailto:hello@legalxng.com"
+                href="mailto:hello@legalxapp.com"
                 className="text-[#b3872d] font-bold hover:text-[#b3872d] transition-colors"
               >
-                hello@legalxng.com
+                hello@legalxapp.com
               </a>
             </div>
           </div>

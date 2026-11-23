@@ -99,9 +99,9 @@ function Footer() {
               Contact Information
             </h3>
             <ul className="space-y-2">
-              <li className="text-gray-600">Email: parofundapp@gmail.com</li>
-              <li className="text-gray-600">Phone: +234 807 216 0000</li>
-              <li className="text-gray-600">Phone: +234 814 421 0602</li>
+              <li className="text-gray-600">Email: hello@legalxapp.com</li>
+              <li className="text-gray-600">Phone: +234 802 939 8817</li>
+              <li className="text-gray-600">Website: www.legalxapp.com</li>
               <li className="text-gray-600">
                 Address: Suite 8 B 4/2 Immanuel Plaza, 2nd 7/10, Chroma Ebieme
                 Crescent, wuye, Abuja
